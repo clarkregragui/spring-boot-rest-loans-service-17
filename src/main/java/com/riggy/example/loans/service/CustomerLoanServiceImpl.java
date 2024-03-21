@@ -14,7 +14,6 @@ import com.riggy.example.loans.model.entity.Customer;
 import com.riggy.example.loans.model.entity.Loan;
 import com.riggy.example.loans.model.entity.LoanProduct;
 import com.riggy.example.loans.model.mapping.CustomerLoanMapper;
-import com.riggy.example.loans.model.mapping.NoSuchProductException;
 
 
 

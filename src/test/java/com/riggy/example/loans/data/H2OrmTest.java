@@ -45,18 +45,6 @@ public class H2OrmTest {
         assertThat(found).isEqualTo(naseem);
     }
     
-    @Test
-    @DirtiesContext
-    @Sql("classpath:sql/schema.sql")
-    public void saveLoanProduct() {
-    	
-        Customer naseem = new Customer(null, "Naseem Regragui", LocalDate.now(), null, null);
-        naseem = customerRepository.save(naseem);
-
-        Customer found = customerRepository.findByNameAndDob(naseem.getName(), naseem.getDob());
-
-        assertThat(found).isEqualTo(naseem);
-    }
     
     @Test
     @DirtiesContext

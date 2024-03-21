@@ -1,4 +1,4 @@
-package com.riggy.example.loans.model.mapping;
+package com.riggy.example.loans.service;
 
 public class NoSuchProductException extends RuntimeException {
 
