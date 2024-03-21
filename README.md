@@ -13,4 +13,4 @@ Oracle PL/SQL
 H2 and TestContainer test examples.
 
 Swagger UI:
-    http://localhost:8080/swagger-ui/
+    http://localhost:8080/swagger-ui/index.html
