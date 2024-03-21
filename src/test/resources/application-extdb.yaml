@@ -11,16 +11,21 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
-      cache:
-        use_second_level_cache: true
-        region: 
-          factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
     properties:
+      javax:
+        persistence:
+          sharedCache: 
+            #required - enable selective caching mode - only entities with @Cacheable annotation will use L2 cache.
+            mode: ENABLE_SELECTIVE 
       hibernate:
         dialect: org.hibernate.dialect.OracleDialect
         format_sql: true
-    show-sql: true
-    
+        hibernate:
+        cache:
+          use_second_level_cache: true
+          region: 
+            factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+    show-sql: true    
   jackson:
     deserialization:
       fail-on-unknown-properties: true
