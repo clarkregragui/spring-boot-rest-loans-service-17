@@ -1,0 +1,31 @@
+
+  # TestContainer db configuration
+
+      
+spring:
+  sql:
+    init:
+      mode: never
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: none
+      cache:
+        use_second_level_cache: true
+        region: 
+          factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+    show-sql: true
+    
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+  
+logging:
+  level: 
+      root: DEBUG
+      com.riggy.example.loans: DEBUG
+    
